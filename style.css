@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --primary-orange-bright: hsl(31, 77%, 52%);
+    --primary-cyan-dark: hsl(184, 100%, 22%);
+    --primary-cyan-darkvery: hsl(179, 100%, 13%);
+    --neutral-white: hsla(0, 0%, 100%, 0.75);
+    --neutral-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.content__container {
+    padding: 40px;
+    flex-basis: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content__heading {
+    color: var(--neutral-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.content__paragraph {
+    color: var(--neutral-white);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.content__container--sedan {
+    background-color: var(--primary-orange-bright);
+}
+
+.content__container--suv {
+    background-color: var(--primary-cyan-dark);
+}
+
+.content__container--luxury {
+    background-color: var(--primary-cyan-darkvery);
+}
+
+.content__button {
+    border: none;
+    border-radius:16px;
+    padding: 10px 25px;
+    background-color: var(--neutral-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    cursor: pointer;
+    width: auto;
+}
+
+.content__button--sedan {
+    color: var(--primary-orange-bright);
+}
+
+.content__button--suv {
+    color: var(--primary-cyan-dark);
+}
+
+.content__button--luxury {
+    color: var(--primary-cyan-darkvery);
+}
+
+.attribution {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width: 650px) {
+    main {
+        height: auto;
+        padding: 0 50px;
+    }
+
+    .container {
+        flex-direction: column;
+        min-height: 700px;
+    }
+
+    .content__container {
+        flex-basis: auto;
+        gap: 30px;
+    }
+
+    .content__button {
+        position: relative;
+    }
+}
+
